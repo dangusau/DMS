@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/newColorWhite"
+    android:clickable="true"
+    tools:context=".ActivitiesFragments.OrderTracking.DeliveryCompleteFeedbackF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iv_close"
+                android:paddingStart="@dimen/_19sdp"
+                android:paddingEnd="@dimen/_27sdp"
+                android:tint="@color/newColorBlack"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_close"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:includeFontPadding="false"
+                android:text="@string/thank_you"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+       <androidx.core.widget.NestedScrollView
+           android:fillViewport="true"
+           android:layout_centerHorizontal="true"
+           android:layout_alignParentBottom="true"
+           android:layout_below="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+
+               <LinearLayout
+                   android:gravity="center_horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_alignParentTop="true"
+                   android:layout_centerHorizontal="true">
+
+
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:id="@+id/iv_profile"
+                       android:layout_width="@dimen/_65sdp"
+                       android:layout_height="@dimen/_65sdp"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_profile_gray"
+                       />
+
+
+
+
+
+                   <com.willy.ratingbar.RotationRatingBar
+                       android:layout_marginTop="@dimen/_20sdp"
+                       android:id="@+id/simpleRatingBar"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:srb_numStars="5"
+                       app:srb_minimumStars="0"
+                       app:srb_rating="0"
+                       app:srb_starWidth="@dimen/_20sdp"
+                       app:srb_starHeight="@dimen/_20sdp"
+                       app:srb_starPadding="@dimen/_5sdp"
+                       app:srb_stepSize="0.5"
+                       app:srb_isIndicator="false"
+                       app:srb_clickable="true"
+                       app:srb_scrollable="true"
+                       app:srb_clearRatingEnabled="true"
+                       app:srb_drawableEmpty="@drawable/ic_star_stroke"
+                       app:srb_drawableFilled="@drawable/ic_star_fill"/>
+
+
+                   <TextView
+                       android:id="@+id/tv_how_was_your_ride"
+                       android:layout_marginTop="@dimen/_12sdp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:includeFontPadding="false"
+                       android:text="@string/we_are_glad_you_any_comment"
+                       android:textColor="@color/newColorBlack"
+                       android:textSize="@dimen/_11sdp"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/clan_ot_narrowmedium"
+                       android:gravity="center"
+                       />
+
+
+                   <com.loopeer.shadow.ShadowView
+                       android:layout_marginStart="@dimen/_27sdp"
+                       android:layout_marginEnd="@dimen/_27sdp"
+                       android:layout_marginTop="@dimen/_20sdp"
+                       android:layout_marginBottom="@dimen/_20sdp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:elevation="@dimen/_8sdp"
+                       android:foreground="?attr/selectableItemBackground"
+                       app:cornerRadius="@dimen/_4sdp"
+                       app:shadowMargin="@dimen/_8sdp"
+                       app:shadowRadius="@dimen/_8sdp">
+
+
+
+
+                       <RelativeLayout
+                           android:layout_centerInParent="true"
+                           android:background="@drawable/ractengle_less_round_solid_white"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+
+                           <EditText
+                               android:layout_alignParentTop="true"
+                               android:minHeight="@dimen/_65sdp"
+                               android:layout_centerInParent="true"
+                               android:id="@+id/et_feedback"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:includeFontPadding="false"
+                               android:hint="@string/type_your_message_here"
+                               android:text=""
+                               android:importantForAutofill="no"
+                               android:inputType="textMultiLine"
+                               android:padding="@dimen/_10sdp"
+                               android:background="@null"
+                               android:textColor="@color/newColorBlack"
+                               android:textColorHint="@color/newColorDarkHint"
+                               android:textSize="@dimen/_10sdp"
+                               android:textStyle="normal"
+                               android:fontFamily="@font/clan_ot_narrowmedium"
+                               android:gravity="start"
+                               tools:ignore="RtlCompat"
+                               android:textAlignment="viewStart"
+                               />
+
+                       </RelativeLayout>
+
+                   </com.loopeer.shadow.ShadowView>
+
+
+               </LinearLayout>
+
+
+
+
+               <LinearLayout
+                   android:layout_marginEnd="@dimen/_20sdp"
+                   android:layout_marginStart="@dimen/_20sdp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:id="@+id/btn_done"
+                   android:layout_marginBottom="@dimen/_15sdp"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_38sdp"
+                   android:gravity="center"
+                   android:background="@drawable/ractengle_less_round_solid_primary"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:includeFontPadding="false"
+                       android:textAllCaps="false"
+                       android:text="@string/done"
+                       android:textColor="@color/newColorWhite"
+                       android:textSize="@dimen/_11ssp"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/clan_ot_narrowmedium"
+                       android:gravity="center"
+                       />
+
+
+               </LinearLayout>
+
+           </RelativeLayout>
+
+
+       </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

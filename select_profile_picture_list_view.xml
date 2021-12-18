@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_15sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/less_round_edge_ractengle_white"
+        android:padding="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textAlignment="viewStart"
+            android:text="@string/select_image_from"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center_vertical|start"
+            />
+
+        <TextView
+            android:id="@+id/txt_take_photo"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center_vertical|start"
+            android:textAlignment="viewStart"
+            android:includeFontPadding="false"
+            android:text="@string/take_photo"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txt_gallery"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:includeFontPadding="false"
+            android:gravity="center_vertical|start"
+            android:textAlignment="viewStart"
+            android:text="@string/choose_photo_from_gallery"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            />
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:includeFontPadding="false"
+            android:gravity="center_vertical|start"
+            android:textAlignment="viewStart"
+            android:text="@string/cancel"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

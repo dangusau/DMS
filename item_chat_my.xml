@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/datetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/_6sdp"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/newColorLightHint"
+        android:textStyle="normal"
+        android:fontFamily="@font/clan_ot_narrowmedium"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datetxt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:id="@+id/message_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:text=""
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:textSize="@dimen/_10ssp"
+            android:includeFontPadding="false"
+            android:id="@+id/msg_date"
+            android:textColor="@color/newColorLightHint"
+            android:layout_gravity="bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:maxWidth="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/msgtxt"
+            android:includeFontPadding="false"
+            android:background="@drawable/d_my_msg_background"
+            android:textColor="@color/newColorWhite"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:gravity="center_vertical"
+            android:text="@string/your_message"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/message_layout"
+        android:textSize="@dimen/_10ssp"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:id="@+id/message_seen"
+        android:textColor="@color/newColorLightHint"
+        android:textStyle="normal"
+        android:fontFamily="@font/clan_ot_narrowmedium"
+        android:layout_marginEnd="@dimen/_6sdp" />
+
+</RelativeLayout>

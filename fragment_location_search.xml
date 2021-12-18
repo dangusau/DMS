@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newColorBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ActivitiesFragments.MainHome.SearchLocationF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/d_bottom_tb_black_line"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iv_back"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:tint="@color/newColorBlack"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back_arrow"/>
+
+
+            <TextView
+                android:id="@+id/tv_search_title"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:includeFontPadding="false"
+                android:text="@string/pickup_location"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/search_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:id="@+id/tab_search_country"
+                android:background="@drawable/d_bottom_et_gray_line"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/str_search"
+                    android:textColor="@color/newColorDarkHint"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical"
+                    />
+
+                <EditText
+                    android:id="@+id/et_text_watcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:includeFontPadding="false"
+                    android:textColorHint="@color/newColorLightHint"
+                    android:hint="@string/str_search"
+                    android:text=""
+                    android:importantForAutofill="no"
+                    android:textColor="@color/newColorBlack"
+                    android:inputType="textPersonName"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:background="@null"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrownews"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlCompat"
+                    android:textAlignment="viewStart"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_nearyby_locations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar">
+
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/tv_Nearby_location"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:includeFontPadding="false"
+                android:text="@string/nearby_locations"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center_vertical|start"
+                android:textAlignment="viewStart"
+                />
+
+
+            <LinearLayout
+                android:layout_below="@+id/tv_Nearby_location"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_Nearby_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_Nearby_location"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true">
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/near_by_location_progress"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/newColorBackground"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".ActivitiesFragments.MainHome.MainF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true">
+
+                <com.google.android.gms.maps.MapView
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"/>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/Access_location_layout_pinview"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/bottom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_pickup_marker"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_location_pickup"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_dropoff_marker"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_location_dropoff"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/bottom_view"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"/>
+
+
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:background="@drawable/d_bottom_to_top_grediant"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:background="@drawable/d_gradient_for_map" />
+
+        </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:visibility="gone"
+                    android:id="@+id/no_location_layout_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/no_location_permission_layout"/>
+
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:visibility="visible"
+                    android:id="@+id/Access_location_layout_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_anchor="@+id/relativeLayout"
+                        app:layout_anchorGravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/ll_menu"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp">
+
+
+                                <ImageView
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentStart="true"
+                                    android:id="@+id/iv_menu"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:paddingEnd="@dimen/_20sdp"
+                                    android:tint="@color/newColorBlack"
+                                    android:layout_width="@dimen/_58sdp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_menu"/>
+
+                                <TextView
+                                    android:id="@+id/tv_select_pickup"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_35sdp"
+                                    android:layout_marginEnd="@dimen/_35sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/select_pickup"
+                                    android:textColor="@color/newColorBlack"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/clan_ot_narrowmedium"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:background="@drawable/d_bottom_tb_gray_line"
+                                android:id="@+id/ll_back"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp">
+
+                                <ImageView
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentStart="true"
+                                    android:id="@+id/iv_back"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:paddingEnd="@dimen/_20sdp"
+                                    android:tint="@color/newColorBlack"
+                                    android:layout_width="@dimen/_58sdp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_back_arrow"/>
+
+                                <TextView
+                                    android:id="@+id/tv_select_dropoff"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_35sdp"
+                                    android:layout_marginEnd="@dimen/_35sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/select_dropoff_location"
+                                    android:textColor="@color/newColorBlack"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/clan_ot_narrowmedium"
+                                    android:gravity="center"
+                                    />
+
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_menu"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            app:cardBackgroundColor="@color/newColorWhite"
+                            app:cardCornerRadius="@dimen/_4sdp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <RelativeLayout
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/newColorWhite"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:id="@+id/rl_pickup_address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_38sdp">
+
+                                        <ImageView
+                                            android:id="@+id/pickup_circle_id"
+                                            android:padding="@dimen/_2sdp"
+                                            android:layout_width="@dimen/_18sdp"
+                                            android:layout_height="@dimen/_18sdp"
+                                            android:tint="@color/newColorPrimary"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ic_circle"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_pickup_loc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_toEndOf="@+id/pickup_circle_id"
+                                            android:orientation="vertical"
+                                            android:gravity="center_vertical"
+                                            android:paddingStart="@dimen/_10sdp"
+                                            tools:ignore="RtlCompat">
+
+                                            <TextView
+                                                android:id="@+id/tv_pickup_address_title"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:textAllCaps="false"
+                                                android:text=""
+                                                android:textColor="@color/newColorDarkHint"
+                                                android:textSize="@dimen/_10ssp"
+                                                android:textStyle="normal"
+                                                android:singleLine="true"
+                                                android:fontFamily="@font/clan_ot_narrowmedium"
+                                                android:gravity="center_vertical"
+                                                />
+
+                                            <TextView
+                                                android:id="@+id/tv_pickup_address"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:textAllCaps="false"
+                                                android:text=""
+                                                android:textColor="@color/newColorLightHint"
+                                                android:textSize="@dimen/_10ssp"
+                                                android:textStyle="normal"
+                                                android:singleLine="true"
+                                                android:fontFamily="@font/clan_ot_narrownews"
+                                                android:gravity="center_vertical"
+                                                android:layout_marginEnd="@dimen/_2sdp"
+                                                />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:id="@+id/view_ll_dropoff_address"
+                                        android:layout_marginStart="@dimen/_38sdp"
+                                        android:layout_marginEnd="@dimen/_20sdp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@color/newColorLightHint"/>
+
+
+                                    <RelativeLayout
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:id="@+id/ll_dropoff_address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_38sdp">
+
+                                        <ImageView
+                                            android:id="@+id/dropoff_circle_id"
+                                            android:padding="@dimen/_2sdp"
+                                            android:layout_width="@dimen/_18sdp"
+                                            android:layout_height="@dimen/_18sdp"
+                                            android:tint="@color/newColorPrimary"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ic_circle"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_dropoff_loc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_toEndOf="@+id/dropoff_circle_id"
+                                            android:orientation="vertical"
+                                            android:gravity="center_vertical"
+                                            android:paddingStart="@dimen/_10sdp"
+                                            tools:ignore="RtlCompat">
+
+
+                                            <RelativeLayout
+                                                android:id="@+id/tab_add_dropoff"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_centerVertical="true"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:includeFontPadding="false"
+                                                    android:textAllCaps="false"
+                                                    android:text="@string/add_dropoff_location"
+                                                    android:textColor="@color/newColorLightHint"
+                                                    android:textSize="@dimen/_10ssp"
+                                                    android:textStyle="normal"
+                                                    android:singleLine="true"
+                                                    android:fontFamily="@font/clan_ot_narrowmedium"
+                                                    android:gravity="center_vertical"
+                                                    />
+
+                                                <ImageView
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_centerVertical="true"
+                                                    android:layout_width="@dimen/_18sdp"
+                                                    android:layout_height="@dimen/_18sdp"
+                                                    android:layout_marginEnd="@dimen/_5sdp"
+                                                    android:src="@drawable/ic_search"
+                                                    android:layout_gravity="center_vertical|end"
+                                                    android:tint="@color/newColorLightHint"/>
+
+                                            </RelativeLayout>
+
+
+                                            <TextView
+                                                android:id="@+id/tv_dropoff_address_title"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:textAllCaps="false"
+                                                android:text=""
+                                                android:textColor="@color/newColorDarkHint"
+                                                android:textSize="@dimen/_10ssp"
+                                                android:textStyle="normal"
+                                                android:singleLine="true"
+                                                android:visibility="gone"
+                                                android:fontFamily="@font/clan_ot_narrowmedium"
+                                                android:gravity="center_vertical"
+                                                />
+
+                                            <TextView
+                                                android:id="@+id/tv_dropoff_address"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:textAllCaps="false"
+                                                android:text=""
+                                                android:textColor="@color/newColorLightHint"
+                                                android:textSize="@dimen/_10ssp"
+                                                android:textStyle="normal"
+                                                android:singleLine="true"
+                                                android:visibility="gone"
+                                                android:fontFamily="@font/clan_ot_narrownews"
+                                                android:gravity="center_vertical"
+                                                android:layout_marginEnd="@dimen/_2sdp"
+                                                />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/sideview_ll_dropoff_address"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_18sdp"
+                                    android:layout_width="@dimen/_2sdp"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:background="@color/newColorPrimary"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                        <ImageView
+                            android:id="@+id/iv_current_location"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_above="@+id/rl_bottom"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_currentlocation"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_select_delivery"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardElevation="@dimen/_1sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_select_delivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_38sdp"
+                                    android:background="@color/newColorWhite">
+
+                                    <ImageView
+                                        android:layout_centerVertical="true"
+                                        android:id="@+id/iv_delivery_type"
+                                        android:layout_width="@dimen/_26sdp"
+                                        android:layout_height="@dimen/_26sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:src="@drawable/ic_delivery_car"
+                                        tools:ignore="RtlCompat" />
+
+                                    <TextView
+                                        android:id="@+id/tv_delivery_type"
+                                        android:layout_centerVertical="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:textAllCaps="false"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_toEndOf="@+id/iv_delivery_type"
+                                        android:text="@string/delivery"
+                                        android:textColor="@color/newColorBlack"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:textStyle="normal"
+                                        android:fontFamily="@font/clan_ot_narrowmedium"
+                                        android:gravity="center"
+                                        />
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_arrow_down"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ic_arrow_down" />
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cv_select_delivery"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/btn_confirm_pickup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_38sdp"
+                                    android:gravity="center"
+                                    android:background="@drawable/ractengle_less_round_solid_primary"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:textAllCaps="false"
+                                        android:text="@string/confirm_pickup"
+                                        android:textColor="@color/newColorWhite"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="normal"
+                                        android:fontFamily="@font/clan_ot_narrowmedium"
+                                        android:gravity="center"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_confirm_dropoff"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_38sdp"
+                                    android:gravity="center"
+                                    android:background="@drawable/ractengle_less_round_solid_primary"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_confirm_dropoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:textAllCaps="false"
+                                        android:text="@string/confirm_dropoff"
+                                        android:textColor="@color/newColorWhite"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="normal"
+                                        android:fontFamily="@font/clan_ot_narrowmedium"
+                                        android:gravity="center"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_Started"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_38sdp"
+                                    android:gravity="center"
+                                    android:background="@drawable/ractengle_less_round_solid_primary"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:includeFontPadding="false"
+                                        android:textAllCaps="false"
+                                        android:text="@string/started"
+                                        android:textColor="@color/newColorWhite"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:textStyle="normal"
+                                        android:fontFamily="@font/clan_ot_narrowmedium"
+                                        android:gravity="center"
+                                        />
+
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </FrameLayout>
+
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="match_parent"
+                android:id="@+id/navigationview_id"
+                android:background="@color/newColorBlack"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true">
+
+                <include layout="@layout/drawer"/>
+
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

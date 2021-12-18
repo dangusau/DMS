@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:id="@+id/not_send_messsage"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:src="@drawable/ic_not_send_message"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/not_send_messsage">
+
+        <TextView
+            android:id="@+id/datetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:padding="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:textColor="@color/newColorLightHint"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:id="@+id/p_bar"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_below="@id/datetxt"
+            android:layout_toEndOf="@+id/audio_bubble" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_below="@+id/p_bar"
+            android:text=""
+            android:layout_alignBottom="@+id/audio_bubble"
+            android:textSize="@dimen/_10ssp"
+            android:includeFontPadding="false"
+            android:layout_toEndOf="@+id/audio_bubble"
+            android:id="@+id/msg_date"
+            android:textColor="@color/newColorLightHint"
+            android:layout_gravity="bottom" />
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_below="@id/datetxt"
+            android:id="@+id/audio_bubble"
+            android:background="@drawable/d_other_msg_background">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:id="@+id/play_btn"
+                    android:scaleType="fitXY"
+                    android:tint="@color/newColorBlack"
+                    android:clickable="false"
+                    android:src="@drawable/ic_play_icon"
+                    android:background="@color/transparent"/>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seek_bar"
+                    android:layout_marginStart="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_toStartOf="@+id/total_time"
+                    android:layout_centerVertical="true"
+                    android:theme="@style/MySeekBar2"
+                    android:clickable="false"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:includeFontPadding="false"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/newColorBlack"
+                    android:id="@+id/total_time" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/audio_bubble"
+            android:textSize="@dimen/_10ssp"
+            android:id="@+id/message_seen"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:textColor="@color/newColorLightHint"
+            android:layout_marginEnd="@dimen/_15sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

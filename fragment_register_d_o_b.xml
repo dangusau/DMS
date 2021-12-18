@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/newColorBackground"
+    android:id="@+id/clickless"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/iv_back"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:tint="@color/newColorBlack"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back_arrow"/>
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:includeFontPadding="false"
+            android:text="@string/birthday"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_62sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/when_your_birthday"
+                    android:textColor="@color/newColorBlack"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/your_birthday_show_publically"
+                    android:textColor="@color/newColorLightHint"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="start"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ycuwq.datepicker.date.DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="match_parent"
+                    app:wheelCurtainColor="@color/newColorWhite"
+                    app:selectedTextColor="@color/newColorPrimary"
+                    app:zoomInSelectedItem="true"
+                    app:wheelCurtain="true"
+                    app:itemTextSize="@dimen/_10sdp"
+                    app:selectedTextSize="@dimen/_11sdp"
+                    android:layout_height="@dimen/_135sdp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/register_no_continue"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:clickable="false"
+                android:gravity="center"
+                android:background="@drawable/ractengle_less_round_solid_primary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text="@string/str_register"
+                    android:textColor="@color/newColorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

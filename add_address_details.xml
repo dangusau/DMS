@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_id"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@android:color/transparent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        >
+
+        <View
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@drawable/d_round_corner_gray"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textStyle="normal"
+            android:text="@string/any_more_address_detail"
+            android:textColor="@color/newColorDarkHint"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            android:background="@color/newColorWhite">
+
+
+            <EditText
+                android:id="@+id/et_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:includeFontPadding="false"
+                android:textStyle="normal"
+                android:importantForAutofill="no"
+                android:fontFamily="@font/clan_ot_narrownews"
+                android:background="@drawable/d_bottom_et_gray_line"
+                android:hint="@string/apartment_building_name"
+                android:textColorHint="@color/newColorLightHint"
+                android:text=""
+                tools:ignore="RtlCompat"
+                android:textAlignment="viewStart"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/_10ssp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/newColorBlack"
+                android:singleLine="true"/>
+
+
+
+           <LinearLayout
+               android:layout_marginTop="@dimen/_25sdp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="10">
+
+               <LinearLayout
+                   android:id="@+id/btn_cancel"
+                   android:layout_width="0dp"
+                   android:layout_weight="4.85"
+                   android:layout_height="@dimen/_38sdp"
+                   android:gravity="center"
+                   android:background="@drawable/d_purple_border_line_rounded"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:includeFontPadding="false"
+                       android:textAllCaps="false"
+                       android:text="@string/skip"
+                       android:textColor="@color/newColorPrimary"
+                       android:textSize="@dimen/_11ssp"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/clan_ot_narrowmedium"
+                       android:gravity="center"
+                       />
+
+
+               </LinearLayout>
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="0.3"/>
+
+               <LinearLayout
+                   android:id="@+id/btn_add"
+                   android:layout_width="0dp"
+                   android:layout_weight="4.85"
+                   android:layout_height="@dimen/_38sdp"
+                   android:gravity="center"
+                   android:background="@drawable/ractengle_less_round_solid_primary"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:includeFontPadding="false"
+                       android:textAllCaps="false"
+                       android:text="@string/str_continue"
+                       android:textColor="@color/newColorWhite"
+                       android:textSize="@dimen/_11ssp"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/clan_ot_narrowmedium"
+                       android:gravity="center"
+                       />
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

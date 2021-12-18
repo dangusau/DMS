@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newColorBackground"
+    android:clickable="true"
+    android:id="@+id/edit_phone_no_container"
+    tools:context=".ActivitiesFragments.EditProfile.EditPhoneNoF">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/iv_back"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:tint="@color/newColorBlack"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back_arrow"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:includeFontPadding="false"
+            android:text="@string/edit_phone_num"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_62sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/enter_phone_number"
+                    android:textColor="@color/newColorBlack"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/_4sdp"
+                    android:text="@string/please_confirm_your_country_code_and_enter_your_phone_number"
+                    android:textColor="@color/newColorLightHint"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/country_code"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+                    <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/et_country_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/plus_92"
+                        android:text=""
+                        android:importantForAutofill="no"
+                        android:textColor="@color/newColorBlack"
+                        android:inputType="phone"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:focusable="false"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="viewStart"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="7.0"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/dummy_number"
+                        android:text=""
+                        android:importantForAutofill="no"
+                        android:textColor="@color/newColorBlack"
+                        android:inputType="phone"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="viewStart"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/edit_send_code"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:gravity="center"
+                android:background="@drawable/ractengle_less_round_solid_primary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text="@string/send_code"
+                    android:textColor="@color/newColorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

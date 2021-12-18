@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:id="@+id/not_send_messsage"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:src="@drawable/ic_not_send_message"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/not_send_messsage">
+        <ProgressBar
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:visibility="gone"
+            android:id="@+id/p_bar"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/chatimage" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_alignBottom="@+id/chatimage"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:layout_toEndOf="@+id/chatimage"
+            android:id="@+id/msg_date"
+            android:textColor="@color/newColorLightHint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:padding="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:textColor="@color/newColorLightHint"
+            android:visibility="visible"
+            android:id="@+id/datetxt"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:id="@+id/chatimage"
+            android:src="@drawable/image_placeholder"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_below="@+id/datetxt"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_15sdp"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/chatimage"
+            android:textSize="@dimen/_10ssp"
+            android:id="@+id/message_seen"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:textColor="@color/newColorLightHint"
+            android:layout_marginStart="@dimen/_15sdp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

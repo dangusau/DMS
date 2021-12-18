@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:background="@drawable/less_round_edge_ractengle_white"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/enter_your_promo_code"
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center"
+            />
+
+
+        <LinearLayout
+            android:background="@drawable/d_bottom_et_gray_line"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/promo_code"
+                android:textColor="@color/newColorDarkHint"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center_vertical"
+                />
+            <EditText
+                android:id="@+id/promo_code_edt_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/clan_ot_narrownews"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_your_promo_code"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:text=""
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:background="@null"
+                android:textColor="@color/newColorBlack"
+                android:textColorHint="@color/newColorLightHint"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="RtlCompat"
+                android:textAlignment="viewStart"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_28sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/promo_code_btn_skip"
+                android:layout_width="0dp"
+                android:layout_weight="4.8"
+                android:layout_height="@dimen/_37sdp"
+                android:gravity="center"
+                android:background="@drawable/d_purple_border_line_rounded"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text="@string/skip"
+                    android:textColor="@color/newColorPrimary"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"/>
+
+            <LinearLayout
+                android:id="@+id/promo_code_btn_refer"
+                android:layout_width="0dp"
+                android:layout_weight="4.8"
+                android:layout_height="@dimen/_37sdp"
+                android:gravity="center"
+                android:background="@drawable/ractengle_less_round_solid_primary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text="@string/str_continue"
+                    android:textColor="@color/newColorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

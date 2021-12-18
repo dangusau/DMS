@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/main_rl_id">
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/view_id"
+            android:background="@color/newColorDarkHint"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:id="@+id/iv_vehicle"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/ic_delivery_car"
+            />
+
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/iv_vehicle"
+            tools:ignore="RtlCompat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_id"
+                android:gravity="center_vertical|start"
+                android:orientation="vertical"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tv_vehicle_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text=""
+                    android:textColor="@color/newColorDarkHint"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical|start"
+                    android:textAlignment="viewStart"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_vehical_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textAllCaps="false"
+                    android:text=""
+                    android:textColor="@color/newColorLightHint"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

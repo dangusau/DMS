@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_profile"
+    android:background="@color/newColorBackground"
+    android:focusable="true"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/d_bottom_tb_black_line"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iv_back"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:tint="@color/newColorBlack"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_menu"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:includeFontPadding="false"
+                android:text="@string/profile"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:includeFontPadding="false"
+                android:text="@string/done"
+                android:textColor="@color/newColorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+        </RelativeLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_30sdp">
+
+                    <FrameLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_profile"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:src="@drawable/ic_profile_gray"
+                            android:scaleType="centerCrop"
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_edit_profile"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:src="@drawable/ic_profile_edit"
+                            android:layout_gravity="bottom|end"
+                            android:scaleType="centerCrop"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="@dimen/_2sdp"
+                            app:civ_border_color="@color/newColorWhite"
+                            />
+
+
+                    </FrameLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:background="@drawable/d_bottom_et_gray_line"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="4.8"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/first_name"
+                            android:textColor="@color/newColorDarkHint"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center_vertical"
+                            />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_fname"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/newColorLightHint"
+                            android:hint="@string/jhon"
+                            android:text=""
+                            android:importantForAutofill="no"
+                            android:textColor="@color/newColorBlack"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:background="@null"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrownews"
+                            android:gravity="center_vertical"
+                            tools:ignore="RtlCompat"
+                            android:textAlignment="viewStart"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"/>
+
+                    <LinearLayout
+                        android:background="@drawable/d_bottom_et_gray_line"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="4.8"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/last_name"
+                            android:textColor="@color/newColorDarkHint"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center_vertical"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_lname"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/newColorLightHint"
+                            android:hint="@string/alex"
+                            android:text=""
+                            android:importantForAutofill="no"
+                            android:textColor="@color/newColorBlack"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:background="@null"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrownews"
+                            android:gravity="center_vertical"
+                            tools:ignore="RtlCompat"
+                            android:textAlignment="viewStart"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_toStartOf="@+id/edit_username"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/username"
+                            android:textColor="@color/newColorDarkHint"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center_vertical"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@null"
+                            android:fontFamily="@font/clan_ot_narrownews"
+                            android:gravity="center_vertical"
+                            android:hint="@string/dummy_user_name"
+                            android:importantForAutofill="no"
+                            android:includeFontPadding="false"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:text=""
+                            android:focusableInTouchMode="false"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:textColor="@color/newColorBlack"
+                            android:textColorHint="@color/newColorLightHint"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="RtlCompat"
+                            android:textAlignment="viewStart"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/edit_username"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/edit_user_name"
+                        android:textColor="@color/newColorPrimary"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/your_email"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/jhonalexmail"
+                        android:textColor="@color/newColorBlack"
+                        android:text=""
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="viewStart"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/dummy_number"
+                        android:textColor="@color/newColorBlack"
+                        android:text=""
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="viewStart"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/date_of_birth"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/dummy_date"
+                        android:textColor="@color/newColorBlack"
+                        android:text=""
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:focusable="false"
+                        tools:ignore="RtlCompat"
+                        android:cursorVisible="false"
+                        android:textAlignment="viewStart"
+                        android:clickable="false"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

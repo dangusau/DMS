@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:background="@drawable/less_round_edge_ractengle_white"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_3sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp"
+        >
+        <TextView
+            android:id="@+id/defult_alert_txt_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/newColorBlack"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center_vertical"
+            />
+
+
+        <TextView
+            android:id="@+id/defult_alert_txt_message"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/newColorDarkHint"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="normal"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center_vertical"
+            />
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:gravity="center_vertical|end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/defult_alert_btn_cancel_no"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/no"
+                android:textColor="@color/newColorPrimary"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+
+            <TextView
+                android:id="@+id/defult_alert_btn_cancel_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/okay"
+                android:textColor="@color/newColorPrimary"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

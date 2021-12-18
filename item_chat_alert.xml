@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/datetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:padding="@dimen/_6sdp"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:fontFamily="@font/clan_ot_narrowmedium"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/newColorLightHint"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:text="@string/your_message"
+        android:textStyle="normal"
+        android:fontFamily="@font/clan_ot_narrowmedium"
+        android:textSize="@dimen/_11ssp"
+        android:paddingStart="@dimen/_15sdp"
+        android:includeFontPadding="false"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/datetxt"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:textColor="@color/newColorBlack"
+        />
+
+</RelativeLayout>

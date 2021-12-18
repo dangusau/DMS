@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/fl_id"
+    android:background="@color/newColorBackground"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_animated_bg"/>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/center_icon"
+            android:layout_width="@dimen/_259sdp"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/_242sdp"
+            android:src="@drawable/ic_get_start"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:fontFamily="@font/clan_ot_narrowmedium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_22sdp"
+            android:text="@string/parcel_is_an_on_demand_parcel_delivery_service"
+            android:textColor="@color/newColorDarkHint"
+            android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:id="@+id/tv_get_started"
+            android:layout_marginTop="@dimen/_37sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:gravity="center"
+            android:background="@drawable/ractengle_less_round_solid_primary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/get_started"
+                android:textColor="@color/newColorWhite"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

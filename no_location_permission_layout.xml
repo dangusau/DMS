@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@color/newColorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp">
+
+       <LinearLayout
+           android:layout_centerInParent="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:textAllCaps="false"
+               android:text="@string/for_effort_less_delivery"
+               android:textColor="@color/newColorWhite"
+               android:textSize="@dimen/_15ssp"
+               android:textStyle="normal"
+               android:fontFamily="@font/clan_ot_narrowmedium"
+               android:gravity="center"
+               />
+
+
+           <TextView
+               android:layout_marginTop="@dimen/_3sdp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:textAllCaps="false"
+               android:lineSpacingExtra="@dimen/_4sdp"
+               android:text="@string/allow_us_to_access_your_location"
+               android:textColor="@color/newColorWhite"
+               android:textSize="@dimen/_13ssp"
+               android:textStyle="normal"
+               android:fontFamily="@font/clan_ot_narrowmedium"
+               android:gravity="center"
+               />
+
+       </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp">
+
+        <LinearLayout
+            android:id="@+id/allow_access_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:gravity="center"
+            android:background="@drawable/ractengle_less_round_solid_primary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/yes_allow"
+                android:textColor="@color/newColorWhite"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/newColorBackground"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:background="@drawable/d_bottom_tb_black_line"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:includeFontPadding="false"
+                android:text="@string/add_payment_methods"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:tint="@color/newColorBlack"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_close"/>
+
+
+        </RelativeLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/card_holder"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/card_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:includeFontPadding="false"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:textColorHint="@color/newColorLightHint"
+                        android:hint="@string/card_name"
+                        android:textColor="@color/newColorBlack"
+                        android:text=""
+                        android:inputType="textPersonName"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:background="@null"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrownews"
+                        android:gravity="center_vertical"
+                        tools:ignore="RtlCompat"
+                        android:textAlignment="viewStart"
+                        />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:background="@drawable/d_bottom_et_gray_line"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ll_card"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/card_Number"
+                            android:textColor="@color/newColorDarkHint"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center_vertical"
+                            />
+
+                        <EditText
+                            android:id="@+id/card_number_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/newColorLightHint"
+                            android:hint="**** **** **** ****"
+                            android:textColor="@color/newColorBlack"
+                            android:text=""
+                            android:importantForAutofill="no"
+                            android:maxLength="19"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:background="@null"
+                            android:textSize="@dimen/_10ssp"
+                            android:inputType="numberSigned"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrownews"
+                            android:gravity="center_vertical"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/selected_card"
+                            android:padding="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:layout_marginEnd="-4dp"
+                            android:src="@drawable/ic_other_card"
+                            />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:paddingStart="@dimen/_20sdp"
+                        android:background="@drawable/d_bottom_et_gray_line"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="4.7"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/expiration"
+                            android:textColor="@color/newColorDarkHint"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center_vertical"
+                            />
+
+                        <EditText
+                            android:id="@+id/expire_date_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/newColorLightHint"
+                            android:hint="@string/mm_yy"
+                            android:text=""
+                            android:importantForAutofill="no"
+                            android:textColor="@color/newColorBlack"
+                            android:inputType="numberSigned"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrownews"
+                            android:gravity="center_vertical"
+                            tools:ignore="RtlCompat"
+                            android:textAlignment="viewStart"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"/>
+
+
+
+                    <RelativeLayout
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:background="@drawable/d_bottom_et_gray_line"
+                        android:layout_width="0dp"
+                        android:layout_weight="4.7"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/ll_help"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/security_code"
+                                android:textColor="@color/newColorDarkHint"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/clan_ot_narrowmedium"
+                                android:gravity="center_vertical"
+                                />
+
+                            <EditText
+                                android:id="@+id/cvv_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_28sdp"
+                                android:includeFontPadding="false"
+                                android:textColorHint="@color/newColorLightHint"
+                                android:hint="@string/dummy_123"
+                                android:importantForAutofill="no"
+                                android:textColor="@color/newColorBlack"
+                                android:text=""
+                                android:maxLength="3"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:background="@null"
+                                android:textSize="@dimen/_10ssp"
+                                android:inputType="numberSigned"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/clan_ot_narrownews"
+                                android:gravity="center_vertical"
+                                tools:ignore="RtlCompat"
+                                android:textAlignment="viewStart"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ll_help"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:tint="@color/newColorHelpAlert"
+                            android:src="@drawable/ic_help_hint"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:id="@+id/btn_save_card"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:gravity="center"
+                    android:background="@drawable/ractengle_less_round_solid_primary"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/add_card"
+                        android:textColor="@color/newColorWhite"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

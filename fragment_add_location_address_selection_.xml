@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/newColorWhite"
+    android:clickable="true"
+    android:id="@+id/fl_id"
+    tools:context=".ActivitiesFragments.OrderCreate.AddLocationUpdateAddressSelectionF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_map"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.gms.maps.MapView
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"/>
+
+            <RelativeLayout
+                android:id="@+id/Access_location_layout_pinview"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/iv_marker"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_location_pickup"/>
+
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/bottom_view"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"/>
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:background="@drawable/d_bottom_to_top_grediant"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/d_gradient_for_map" />
+
+    </RelativeLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:visibility="visible"
+        android:id="@+id/Access_location_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@+id/relativeLayout"
+            app:layout_anchorGravity="center">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/iv_back"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:tint="@color/newColorBlack"
+                    android:layout_width="@dimen/_58sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_back_arrow"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/select_pickup"
+                    android:textColor="@color/newColorBlack"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/clan_ot_narrowmedium"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:cardBackgroundColor="@color/newColorWhite"
+                app:cardCornerRadius="@dimen/_4sdp"
+                app:cardElevation="@dimen/_4sdp">
+
+                <RelativeLayout
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/newColorWhite"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:id="@+id/rl_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_38sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_circle_id"
+                                android:padding="@dimen/_2sdp"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:tint="@color/newColorPrimary"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_circle"/>
+
+                            <LinearLayout
+                                android:id="@+id/ll_loc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_toEndOf="@+id/iv_circle_id"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical"
+                                android:paddingStart="@dimen/_10sdp"
+                                tools:ignore="RtlCompat">
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_address_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:textAllCaps="false"
+                                    android:text=""
+                                    android:textColor="@color/newColorDarkHint"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textStyle="normal"
+                                    android:singleLine="true"
+                                    android:fontFamily="@font/clan_ot_narrowmedium"
+                                    android:gravity="center_vertical"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textAllCaps="false"
+                                    android:text=""
+                                    android:textColor="@color/newColorLightHint"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textStyle="normal"
+                                    android:singleLine="true"
+                                    android:fontFamily="@font/clan_ot_narrownews"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <ImageView
+                android:id="@+id/iv_current_location"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_above="@+id/rl_bottom"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_currentlocation"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_alignParentBottom="true">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+
+                    <LinearLayout
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:gravity="center"
+                        android:background="@drawable/ractengle_less_round_solid_primary"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textAllCaps="false"
+                            android:text="@string/confirm"
+                            android:textColor="@color/newColorWhite"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/clan_ot_narrowmedium"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

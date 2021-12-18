@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/transparent"
+    tools:context=".BottomSheetDialogsFragments.AddPackageSizeSelectionBottomSheet">
+
+   <LinearLayout
+       android:background="@drawable/d_round_top_corners_primary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_marginBottom="@dimen/_5sdp"
+           android:paddingStart="@dimen/_20sdp"
+           android:paddingEnd="@dimen/_20sdp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:includeFontPadding="false"
+           android:textAllCaps="false"
+           android:text="@string/packages_size"
+           android:textColor="@color/newColorWhite"
+           android:textSize="@dimen/_11ssp"
+           android:textStyle="normal"
+           android:fontFamily="@font/clan_ot_narrowmedium"
+           android:gravity="center_vertical|start"
+           />
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_120sdp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_marginTop="@dimen/_5sdp"
+               android:layout_marginBottom="@dimen/_5sdp"
+               android:layout_marginStart="@dimen/_20sdp"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"
+               android:layout_alignParentBottom="true"
+               android:id="@+id/recyclerview"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+
+           <TextView
+               android:visibility="gone"
+               android:id="@+id/txt_no_data"
+               android:layout_centerInParent="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:textAllCaps="false"
+               android:text="@string/no_packages_found"
+               android:textColor="@color/newColorWhite"
+               android:textSize="@dimen/_11ssp"
+               android:textStyle="normal"
+               android:fontFamily="@font/clan_ot_narrowmedium"
+               android:gravity="center"
+               />
+
+
+       </RelativeLayout>
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="@drawable/d_round_top_corners"
+           >
+
+           <View
+               android:layout_marginTop="@dimen/_10sdp"
+               android:layout_width="@dimen/_50sdp"
+               android:layout_height="@dimen/_2sdp"
+               android:background="@drawable/d_round_corner_gray"
+               android:layout_gravity="center_horizontal" />
+
+
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="@dimen/_20sdp"
+               android:background="@color/newColorWhite">
+
+
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="10">
+
+                   <RelativeLayout
+                       android:id="@+id/btn_cancel"
+                       android:layout_width="0dp"
+                       android:layout_weight="4.85"
+                       android:layout_height="match_parent"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_selected_price"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:includeFontPadding="false"
+                               android:textAllCaps="false"
+                               android:textAlignment="viewStart"
+                               android:text=""
+                               android:textColor="@color/newColorBlack"
+                               android:textSize="@dimen/_21ssp"
+                               android:textStyle="normal"
+                               android:fontFamily="@font/clan_ot_narrowmedium"
+                               android:gravity="center_vertical|start"
+                               />
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:includeFontPadding="false"
+                               android:textAllCaps="false"
+                               android:textAlignment="viewStart"
+                               android:text="@string/estimated_price"
+                               android:textColor="@color/newColorDarkHint"
+                               android:textSize="@dimen/_11ssp"
+                               android:textStyle="normal"
+                               android:fontFamily="@font/clan_ot_narrowmedium"
+                               android:gravity="center_vertical|start"
+                               />
+
+                       </LinearLayout>
+
+
+                   </RelativeLayout>
+
+                   <View
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="0.3"/>
+
+                   <LinearLayout
+                       android:id="@+id/btn_next"
+                       android:layout_width="0dp"
+                       android:layout_weight="4.85"
+                       android:layout_height="@dimen/_38sdp"
+                       android:gravity="center"
+                       android:background="@drawable/ractengle_less_round_solid_primary"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:includeFontPadding="false"
+                           android:textAllCaps="false"
+                           android:text="@string/next"
+                           android:textColor="@color/newColorWhite"
+                           android:textSize="@dimen/_11ssp"
+                           android:textStyle="normal"
+                           android:fontFamily="@font/clan_ot_narrowmedium"
+                           android:gravity="center"
+                           />
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/newColorBackground">
+
+    <LinearLayout
+        android:layout_above="@+id/txt_main_home_version_code"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tab_profile"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_62sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_profile_gray"
+                />
+
+            <TextView
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/welcome_back"
+                android:textColor="@color/newColorBlack"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/clan_ot_narrowmedium"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_home">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_home"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:tint="@color/newColorDarkHint"
+                android:src="@drawable/ic_home"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_home"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/home"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_profile">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_user"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:tint="@color/newColorDarkHint"
+                android:src="@drawable/ic_user_profile"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_user"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/profile"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+
+            android:id="@+id/ll_history">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_history"
+                android:tint="@color/newColorDarkHint"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_history"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_history"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/history"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_pay">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_pay"
+                android:tint="@color/newColorDarkHint"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_pay"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_pay"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/payment_methods"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_change_password">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_change_password"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:tint="@color/newColorDarkHint"
+                android:src="@drawable/ic_change_password"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_change_password"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/change_password"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_settings">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_settings"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:tint="@color/newColorDarkHint"
+                android:src="@drawable/ic_settings"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_settings"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/settings"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/ll_logout">
+
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/iv_logout"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:tint="@color/newColorDarkHint"
+                android:src="@drawable/ic_logout"
+                />
+
+            <RelativeLayout
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_logout"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/logout"
+                        android:textColor="@color/newColorDarkHint"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:fontFamily="@font/clan_ot_narrowmedium"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_main_home_version_code"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_26sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textAllCaps="false"
+        android:text="@string/verify_code"
+        android:textColor="@color/newColorDarkHint"
+        android:textSize="@dimen/_11ssp"
+        android:textStyle="normal"
+        android:singleLine="true"
+        android:fontFamily="@font/clan_ot_narrowmedium"
+        android:gravity="center_vertical"
+        />
+
+</RelativeLayout>
