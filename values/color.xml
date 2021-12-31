@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F54D6E</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#F54D6E</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="newColorRed">#F43636</color>
+    <color name="newColorGreen">#32CD32</color>
+    <color name="newColorPrimary">#F54D6E</color>
+    <color name="newColorBlack">#000000</color>
+    <color name="newColorWhite">#FFFFFF</color>
+    <color name="newColorLightHint">#C2C2C2</color>
+    <color name="newColorLightHintLine">#80C2C2C2</color>
+    <color name="newColorDarkHint">#787878</color>
+    <color name="newColorBackground">#FFFFFF</color>
+    <color name="newColorHelpAlert">#009dd9</color>
+    <color name="newColorGooglebg">#db4437</color>
+    <color name="newColorFacebookbg">#3b5998</color>
+</resources>
